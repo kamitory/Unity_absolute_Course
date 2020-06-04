@@ -21,7 +21,8 @@ public class RemoveBullet : MonoBehaviour
         ContactPoint contact = coll.contacts[0];
         Quaternion rot = Quaternion.FromToRotation(-Vector3.forward, contact.normal);
 
-        Instantiate(sparkEffect, contact.point, rot);
+        GameObject spark = Instantiate(sparkEffect, contact.point+ (-contact.normal*0.05f), rot);
+        spark.transform.SetParent(this.transform);
     }
 
     // Start is called before the first frame update
