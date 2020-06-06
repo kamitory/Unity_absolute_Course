@@ -19,7 +19,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private Transform tr;
     public float moveSpeed = 5.0f;
-    public float rotSpeed = 80.0f;
+    public float rotSpeed = 150.0f;
 
     public PlayerAnim playerAnim;
     [HideInInspector]

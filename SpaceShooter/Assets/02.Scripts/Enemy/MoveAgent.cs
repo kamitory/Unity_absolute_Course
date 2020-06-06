@@ -12,7 +12,7 @@ public class MoveAgent : MonoBehaviour
 
     private readonly float patrolSpeed = 1.5f;
     private readonly float traceSpeed = 4.0f;
-    private float damping = 1.0f;
+    private float damping = 7.0f;
 
     private NavMeshAgent agent;
     private Transform enemyTr;
