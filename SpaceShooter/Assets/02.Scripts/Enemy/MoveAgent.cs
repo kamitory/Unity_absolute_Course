@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,6 +67,8 @@ public class MoveAgent : MonoBehaviour
             group.GetComponentsInChildren<Transform>(wayPoints);
             wayPoints.RemoveAt(0);
 
+            nextIdx = Random.Range(0, wayPoints.Count);
+
         }
         MoveWayPoint();
     }
@@ -106,7 +108,8 @@ public class MoveAgent : MonoBehaviour
 
         if (agent.velocity.sqrMagnitude >= 0.2f * 0.2f && agent.remainingDistance <= 0.5f) 
         {
-            nextIdx = ++nextIdx % wayPoints.Count;
+            //nextIdx = ++nextIdx % wayPoints.Count;
+            nextIdx = Random.Range(0, wayPoints.Count);
             MoveWayPoint();
         }
     }
