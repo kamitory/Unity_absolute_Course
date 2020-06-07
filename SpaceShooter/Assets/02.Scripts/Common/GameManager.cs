@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
     public int maxPool = 10;
     public List<GameObject> bulletPool = new List<GameObject>();
 
-
-
+    private bool isPaused;
+    public CanvasGroup inventoryCG;
 
     private void Awake()
     {
@@ -39,12 +39,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        OnInventoryOpen(false);
+
         points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
         if(points.Length>0)
         {
             StartCoroutine(this.CreateEnemy());
         }
     }
+  
 
     IEnumerator CreateEnemy()
     {
@@ -88,6 +91,29 @@ public class GameManager : MonoBehaviour
             obj.SetActive(false);
             bulletPool.Add(obj);
         }
+    }
+
+    public void OnPauseClick()
+    {
+        isPaused = !isPaused;
+
+        Time.timeScale = (isPaused) ? 0.0f : 1.0f;
+
+        var playerObj = GameObject.FindGameObjectWithTag("PLAYER");
+        var scripts = playerObj.GetComponents<MonoBehaviour>();
+        foreach(var script in scripts)
+        {
+            script.enabled = !isPaused;
+        }
+        var canvasGroup = GameObject.Find("Panel - Weapon").GetComponent<CanvasGroup>();
+        canvasGroup.blocksRaycasts = !isPaused;
+    }
+
+    public void OnInventoryOpen(bool isOpened)
+    {
+        inventoryCG.alpha = (isOpened) ? 1.0f : 0.0f;
+        inventoryCG.interactable = isOpened;
+        inventoryCG.blocksRaycasts = isOpened;
     }
     // Update is called once per frame
     void Update()
