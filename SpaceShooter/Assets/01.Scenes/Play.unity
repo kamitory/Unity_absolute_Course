@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 179708393}
   - component: {fileID: 179708392}
   - component: {fileID: 179708396}
+  - component: {fileID: 179708397}
   m_Layer: 5
   m_Name: ItemSpeed
   m_TagString: Untagged
@@ -456,6 +457,24 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &179708397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179708390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9f4735535e2a0488f6365754a3e4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData:
+    itemType: 1
+    itemCalc: 0
+    name: Speed Up
+    desc: Incread Speed 10%
+    value: 0.1
 --- !u!1001 &181612491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +564,7 @@ GameObject:
   - component: {fileID: 189564392}
   - component: {fileID: 189564391}
   - component: {fileID: 189564395}
+  - component: {fileID: 189564396}
   m_Layer: 5
   m_Name: ItemHp
   m_TagString: Untagged
@@ -676,6 +696,24 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &189564396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189564389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9f4735535e2a0488f6365754a3e4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData:
+    itemType: 0
+    itemCalc: 0
+    name: Hp Up
+    desc: Increase +10 Hp
+    value: 10
 --- !u!1001 &194075921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5252,6 +5290,84 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1410672530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1563604787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563604790}
+  - component: {fileID: 1563604789}
+  - component: {fileID: 1563604788}
+  m_Layer: 5
+  m_Name: KillCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1563604788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563604787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fae067962e5934395be31c8aba4a3455, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: KILL 0000
+--- !u!222 &1563604789
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563604787}
+  m_CullTransparentMesh: 0
+--- !u!224 &1563604790
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563604787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1833794200}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 188}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1583406290 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6722961490678753223, guid: 779abdcdd4264d843afcee8629bdb543,
@@ -5466,6 +5582,7 @@ GameObject:
   - component: {fileID: 1609188817}
   - component: {fileID: 1609188816}
   - component: {fileID: 1609188820}
+  - component: {fileID: 1609188821}
   m_Layer: 5
   m_Name: ItemGrenade
   m_TagString: Untagged
@@ -5597,6 +5714,24 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1609188821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609188814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9f4735535e2a0488f6365754a3e4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData:
+    itemType: 2
+    itemCalc: 0
+    name: Grenade Up
+    desc: Incread +2 Grenade
+    value: 2
 --- !u!1 &1629582930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,6 +5746,7 @@ GameObject:
   - component: {fileID: 1629582933}
   - component: {fileID: 1629582932}
   - component: {fileID: 1629582936}
+  - component: {fileID: 1629582937}
   m_Layer: 5
   m_Name: ItemShock
   m_TagString: Untagged
@@ -5742,6 +5878,24 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1629582937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629582930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9f4735535e2a0488f6365754a3e4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData:
+    itemType: 3
+    itemCalc: 0
+    name: Damage Up
+    desc: Incread 5% Damage
+    value: 0.05
 --- !u!4 &1659716545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2569717091079153416, guid: de5b6251da1135c4099826ee3d46e38d,
@@ -6135,6 +6289,7 @@ RectTransform:
   - {fileID: 2108785997}
   - {fileID: 893781787}
   - {fileID: 2110020460}
+  - {fileID: 1563604790}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6279,6 +6434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884549533}
   - component: {fileID: 1884549532}
+  - component: {fileID: 1884549534}
   m_Layer: 0
   m_Name: GameMgr
   m_TagString: Untagged
@@ -6303,11 +6459,18 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 10
   isGameOver: 0
+  inventoryCG: {fileID: 2110020463}
   bulletPrefab: {fileID: 6428569985586089766, guid: 3bc456b53bf70274c85fd44b64178309,
     type: 3}
   maxPool: 10
   bulletPool: []
-  inventoryCG: {fileID: 2110020463}
+  killCountTxt: {fileID: 1563604788}
+  gameData: {fileID: 11400000, guid: 8c5cdc0eecd0f34428b94a7d82e83c9e, type: 2}
+  itemObjects:
+  - {fileID: 189564389}
+  - {fileID: 179708390}
+  - {fileID: 1609188814}
+  - {fileID: 1629582930}
 --- !u!4 &1884549533
 Transform:
   m_ObjectHideFlags: 0
@@ -6322,6 +6485,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1884549534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884549531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6bf69ca8aeb6446a05b0644646ad7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1885717847
 GameObject:
   m_ObjectHideFlags: 0
