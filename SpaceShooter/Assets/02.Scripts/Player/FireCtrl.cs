@@ -67,7 +67,16 @@ public class FireCtrl : MonoBehaviour
     private void Fire()
     {
         StartCoroutine(shake.ShakeCamera());
-        Instantiate(bullet, firePos.position, firePos.rotation);
+        //Instantiate(bullet, firePos.position, firePos.rotation);
+
+        var _bullet = GameManager.instance.GetBullet();
+        if (_bullet != null)
+        {
+            _bullet.transform.position = firePos.position;
+            _bullet.transform.rotation = firePos.rotation;
+            _bullet.SetActive(true);
+        }
+
         cartridge.Play();
         muzzleFlash.Play();
         FireSfx();
